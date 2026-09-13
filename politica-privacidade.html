@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de privacidade e tratamento de dados pessoais do assistente virtual C&D Agent da C&D PetShop.">
+  <title>Política de Privacidade | C&D PetShop</title>
+  <style>
+    :root {
+      --primary: #F57C00;
+      --primary-hover: #E06C00;
+      --bg-main: #FFFFFF;
+      --bg-alt: #FFF8EF;
+      --text-dark: #2F2F2F;
+      --text-muted: #5B4636;
+      --border-color: #E2D7CD;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover, a:focus {
+      color: var(--primary-hover);
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* Header e Navegação */
+    header {
+      background-color: var(--bg-main);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-tag {
+      background-color: var(--bg-alt);
+      color: var(--primary);
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      border: 1px solid var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+
+    /* Hero Banner */
+    .hero {
+      background-color: var(--bg-alt);
+      padding: 3rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .date-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background-color: var(--bg-main);
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Principal */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--bg-alt);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Componentes de Destaque */
+    .card {
+      background-color: var(--bg-alt);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: var(--card-shadow);
+    }
+
+    .alert-box {
+      background-color: #FFF3E0;
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #FFFFFF !important;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.2s ease-in-out;
+      margin-top: 0.5rem;
+    }
+
+    .cta-button:hover, .cta-button:focus {
+      background-color: var(--primary-hover);
+      color: #FFFFFF;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--text-dark);
+      color: #FFFFFF;
+      padding: 3rem 1.5rem 1.5rem 1.5rem;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-col h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col p, .footer-col ul {
+      color: #E0E0E0;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover, .footer-col a:focus {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid #444444;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #AAAAAA;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="politica-privacidade.html" class="brand">
+        C&amp;D PetShop <span class="brand-tag">C&amp;D Agent</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="politica-privacidade.html" class="active" aria-current="page">Política de Privacidade</a></li>
+          <li><a href="exclusao-de-dados.html">Exclusão de Dados</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Política de Privacidade</h1>
+      <p>Política de privacidade e tratamento de dados do C&amp;D Agent.</p>
+      <span class="date-badge">Última atualização: 13 de setembro de 2026</span>
+    </div>
+  </div>
+
+  <main>
+
+    <section>
+      <h2>1. Sobre esta Política</h2>
+      <p>A C&amp;D PetShop valoriza a privacidade dos seus clientes e busca tratar dados pessoais de maneira transparente, segura e totalmente compatível com a legislação aplicável, incluindo a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD).</p>
+      <p>Esta política se aplica às interações realizadas através dos canais digitais da nossa loja, incluindo atendimentos realizados via WhatsApp, e especificamente ao atendimento automatizado oferecido pelo <strong>C&amp;D Agent</strong>.</p>
+      <p>O <strong>C&amp;D Agent</strong> é o nosso assistente virtual de atendimento e vendas, desenvolvido para proporcionar agilidade e eficiência no suporte aos nossos clientes.</p>
+    </section>
+
+    <section>
+      <h2>2. Dados que podem ser tratados</h2>
+      <p>Dependendo da sua interação com os nossos canais digitais, podemos coletar e tratar os seguintes dados pessoais:</p>
+      <ul>
+        <li>Número de telefone utilizado para o contato;</li>
+        <li>Nome ou identificação fornecida pelo cliente;</li>
+        <li>Mensagens, áudios ou conteúdos enviados durante o atendimento;</li>
+        <li>Informações sobre o seu animal de estimação fornecidas voluntariamente (como espécie, idade, raça e porte);</li>
+        <li>Produtos ou serviços pelos quais você demonstra interesse;</li>
+        <li>Informações necessárias para viabilizar o suporte e atendimento comercial;</li>
+        <li>Dados técnicos estritamente necessários para a segurança, funcionamento e diagnóstico de problemas nos sistemas.</li>
+      </ul>
+      <div class="alert-box">
+        <p><strong>Aviso Importante:</strong> Por razões de segurança, orientação e proteção, os clientes não devem enviar senhas, códigos de autenticação, dados completos de cartão de crédito ou outras informações financeiras desnecessárias durante as conversas.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Como utilizamos os dados</h2>
+      <p>Os dados pessoais coletados são utilizados para finalidades legítimas e específicas, incluindo:</p>
+      <ul>
+        <li>Responder a dúvidas e fornecer suporte técnico ou comercial;</li>
+        <li>Prestar atendimento de vendas e orçamento de produtos;</li>
+        <li>Apresentar o catálogo de produtos e serviços disponíveis;</li>
+        <li>Recomendar produtos adequados de acordo com as informações do seu pet fornecidas por você;</li>
+        <li>Manter o contexto do atendimento para evitar repetições desnecessárias;</li>
+        <li>Encaminhar situações complexas para o atendimento humano apropriado;</li>
+        <li>Processar solicitações e pedidos dos clientes;</li>
+        <li>Melhorar a estabilidade, segurança e qualidade dos nossos sistemas;</li>
+        <li>Cumprir obrigações legais, regulatórias ou ordens judiciais.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Atendimento automatizado e inteligência artificial</h2>
+      <p>O C&amp;D Agent utiliza tecnologias de automação e inteligência artificial para otimizar o atendimento ao cliente. O assistente virtual gera respostas com base nas informações disponíveis em nosso banco de dados comercial e nas mensagens enviadas pelo próprio usuário.</p>
+      <div class="alert-box">
+        <p><strong>Atenção sobre Saúde Pet:</strong> O C&amp;D Agent não substitui a orientação veterinária profissional. Quaisquer dúvidas ou questões relacionadas à saúde, diagnóstico, sintomas ou tratamento de cães e gatos devem obrigatoriamente ser direcionadas a um médico-veterinário habilitado.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. WhatsApp e serviços de terceiros</h2>
+      <p>Quando você entra em contato com a C&amp;D PetShop através do WhatsApp, o tratamento dos seus dados também fica sujeito aos Termos de Serviço e Políticas de Privacidade da plataforma WhatsApp e da Meta Platforms, Inc.</p>
+      <p>Utilizamos a infraestrutura oficial da <strong>WhatsApp Business Platform (API Cloud)</strong> para receber e responder às mensagens. Adicionalmente, fornecedores de tecnologia terceirizados podem ser contratados para prestar serviços essenciais de hospedagem de dados, armazenamento, segurança da informação, comunicação e processamento necessário para o correto funcionamento dos sistemas do C&amp;D Agent.</p>
+    </section>
+
+    <section>
+      <h2>6. Compartilhamento de dados</h2>
+      <p>A C&amp;D PetShop pode compartilhar dados pessoais estritamente necessários com:</p>
+      <ul>
+        <li>Provedores de infraestrutura técnica, nuvem e tecnologia;</li>
+        <li>Plataformas de comunicação que viabilizam o atendimento;</li>
+        <li>Prestadores de serviços essenciais à operação da loja;</li>
+        <li>Autoridades públicas, governamentais ou judiciais, exclusivamente mediante obrigação legal ou ordem expressa.</li>
+      </ul>
+      <div class="card">
+        <p><strong>Compromisso de Privacidade:</strong> Não comercializamos, vendemos ou alugamos dados pessoais dos nossos clientes como produto sob qualquer hipótese.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Armazenamento e segurança</h2>
+      <p>Adotamos medidas técnicas, administrativas e organizacionais razoáveis e adequadas para proteger os dados pessoais contra acesso não autorizado, perda, alteração, divulgação ou destruição indevida.</p>
+      <p>Os dados coletados são armazenados apenas pelo período estritamente necessário para cumprir as finalidades para as quais foram coletados, bem como para o cumprimento de obrigações legais, regulatórias e para o exercício regular de direitos em processos.</p>
+    </section>
+
+    <section>
+      <h2>8. Direitos do titular</h2>
+      <p>Na qualidade de titular dos dados pessoais, de acordo com a LGPD, você possui os seguintes direitos:</p>
+      <ul>
+        <li>Confirmação da existência de tratamento dos seus dados;</li>
+        <li>Acesso aos dados mantidos pela empresa;</li>
+        <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>Informações sobre com quais entidades os dados foram compartilhados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos;</li>
+        <li>Demais direitos garantidos pela Lei Geral de Proteção de Dados Pessoais.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. Exclusão de dados</h2>
+      <p>Você tem o direito de solicitar a exclusão de seus dados pessoais do nosso banco de dados a qualquer momento, observadas as hipóteses legais de conservação obrigatória previstas em lei.</p>
+      <div class="card">
+        <p>Para obter instruções completas ou formalizar um pedido de eliminação de dados, acesse a nossa página dedicada:</p>
+        <a href="exclusao-de-dados.html" class="cta-button">Solicitar exclusão de dados</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. Crianças e adolescentes</h2>
+      <p>Os serviços oferecidos pela C&amp;D PetShop e pelo C&amp;D Agent não são especificamente direcionados a crianças. O tratamento de eventual dado pertencente a crianças e adolescentes observará estritamente os requisitos dispostos na legislação aplicável.</p>
+    </section>
+
+    <section>
+      <h2>11. Alterações da Política</h2>
+      <p>Esta Política de Privacidade poderá ser atualizada periodicamente para refletir melhorias em nossos sistemas ou adequações legislativas. A versão mais recente e atualizada estará sempre publicada nesta mesma página.</p>
+    </section>
+
+    <section>
+      <h2>12. Contato</h2>
+      <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre o tratamento de seus dados pessoais, entre em contato conosco:</p>
+      <p><strong>C&amp;D PetShop</strong><br>
+      E-mail: <a href="mailto:cedpetshop0@gmail.com">cedpetshop0@gmail.com</a></p>
+      <p>Solicitações de suporte, informações sobre produtos, trocas, devoluções, reembolsos e reclamações gerais também podem ser encaminhadas diretamente ao nosso e-mail para atendimento humano.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>C&amp;D PetShop</h3>
+        <p>Atendimento humanizado e inteligência artificial para o bem-estar do seu pet.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="exclusao-de-dados.html">Exclusão de Dados</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <p>E-mail: cedpetshop0@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 C&amp;D PetShop. Todos os direitos reservados. C&amp;D Agent é um serviço de atendimento oficial da C&amp;D PetShop.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

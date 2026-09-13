@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instruções e solicitações para exclusão de dados pessoais no atendimento C&D Agent da C&D PetShop.">
+  <title>Exclusão de Dados | C&D PetShop</title>
+  <style>
+    :root {
+      --primary: #F57C00;
+      --primary-hover: #E06C00;
+      --bg-main: #FFFFFF;
+      --bg-alt: #FFF8EF;
+      --text-dark: #2F2F2F;
+      --text-muted: #5B4636;
+      --border-color: #E2D7CD;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover, a:focus {
+      color: var(--primary-hover);
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* Header e Navegação */
+    header {
+      background-color: var(--bg-main);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-tag {
+      background-color: var(--bg-alt);
+      color: var(--primary);
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      border: 1px solid var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+
+    /* Hero Banner */
+    .hero {
+      background-color: var(--bg-alt);
+      padding: 3rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    /* Principal */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--bg-alt);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Componentes de Destaque */
+    .contact-box {
+      background-color: var(--bg-alt);
+      border: 2px dashed var(--primary);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .contact-box p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    .email-link {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .email-link:hover, .email-link:focus {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    .alert-box {
+      background-color: #FFF3E0;
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .secondary-button {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+      margin-top: 0.5rem;
+    }
+
+    .secondary-button:hover, .secondary-button:focus {
+      background-color: var(--primary);
+      color: #FFFFFF;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--text-dark);
+      color: #FFFFFF;
+      padding: 3rem 1.5rem 1.5rem 1.5rem;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-col h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col p, .footer-col ul {
+      color: #E0E0E0;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover, .footer-col a:focus {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid #444444;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #AAAAAA;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .email-link {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="politica-privacidade.html" class="brand">
+        C&amp;D PetShop <span class="brand-tag">C&amp;D Agent</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="exclusao-de-dados.html" class="active" aria-current="page">Exclusão de Dados</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Exclusão de Dados</h1>
+      <p>Solicitação de exclusão de dados pessoais.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <section>
+      <h2>1. Como solicitar a exclusão dos seus dados</h2>
+      <p>A C&amp;D PetShop disponibiliza esta página dedicada para que nossos clientes possam, de forma simples e direta, solicitar a eliminação dos seus dados pessoais armazenados em nossos sistemas de atendimento e vendas.</p>
+      <p>Ressaltamos que o atendimento do pedido de exclusão observará estritamente as situações e exceções em que a legislação vigente permita ou exija a conservação de determinadas informações.</p>
+    </section>
+
+    <section>
+      <h2>2. Solicitação por e-mail</h2>
+      <div class="contact-box">
+        <p>Solicite a exclusão dos seus dados pelo e-mail:</p>
+        <a href="mailto:cedpetshop0@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20exclus%C3%A3o%20de%20dados" class="email-link">cedpetshop0@gmail.com</a>
+      </div>
+      <p>Para facilitar a identificação, você pode enviar o e-mail utilizando o assunto sugerido: <strong>Solicitação de exclusão de dados</strong>.</p>
+    </section>
+
+    <section>
+      <h2>3. Informações que ajudam a localizar os dados</h2>
+      <p>Para garantir a segurança do processo e garantir que os dados corretos sejam eliminados, recomendamos que você informe no corpo do e-mail:</p>
+      <ul>
+        <li>Seu nome completo ou identificação fornecida durante o atendimento;</li>
+        <li>O número de telefone (com DDD) utilizado para interagir com a C&amp;D PetShop;</li>
+        <li>Declaração clara de que deseja a exclusão dos seus dados pessoais;</li>
+        <li>Qualquer informação adicional ou contexto que nos ajude a identificar e localizar o atendimento.</li>
+      </ul>
+      <div class="alert-box">
+        <p><strong>Aviso de Segurança:</strong> Não envie senhas, códigos de autenticação, dados completos de cartão de crédito ou quaisquer outras informações financeiras sensíveis para realizar a solicitação.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. O que acontece depois da solicitação</h2>
+      <p>Assim que recebida, a sua solicitação será analisada pela nossa equipe. Poderemos verificar e validar as informações fornecidas para certificar a identidade do titular e localizar os registros correspondentes nos bancos de dados do nosso assistente.</p>
+      <p>Quando a exclusão for aplicável, os dados serão eliminados de forma definitiva ou anonimizados em conformidade com as exigências legais e normas vigentes.</p>
+    </section>
+
+    <section>
+      <h2>5. Quando alguns dados podem ser mantidos</h2>
+      <p>Em consonância com a Lei Geral de Proteção de Dados (LGPD), determinados dados pessoais poderão ser mantidos, mesmo após solicitação de exclusão, nas seguintes hipóteses:</p>
+      <ul>
+        <li>Cumprimento de obrigação legal ou regulatória por parte da C&amp;D PetShop;</li>
+        <li>Necessidade para o exercício regular de direitos em processos judiciais, administrativos ou arbitrais;</li>
+        <li>Prevenção à fraude e garantia da segurança dos sistemas;</li>
+        <li>Outras hipóteses expressamente previstas em lei.</li>
+      </ul>
+      <p>Nesses casos específicos, o uso dos dados mantidos será estritamente limitado às finalidades legais que justificam a sua conservação.</p>
+    </section>
+
+    <section>
+      <h2>6. Dados relacionados ao C&amp;D Agent</h2>
+      <p>A solicitação de exclusão inclui diretamente os registros gerados durante as interações com o nosso assistente virtual C&amp;D Agent via WhatsApp, tais como:</p>
+      <ul>
+        <li>O registro do número de telefone associado;</li>
+        <li>Histórico de mensagens e interações de atendimento;</li>
+        <li>Informações do pet ou preferências fornecidas voluntariamente durante as conversas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Contato</h2>
+      <p>Para dúvidas adicionais ou acompanhamento da sua solicitação, entre em contato:</p>
+      <p><strong>C&amp;D PetShop</strong><br>
+      E-mail: <a href="mailto:cedpetshop0@gmail.com">cedpetshop0@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>8. Política de Privacidade</h2>
+      <p>Para saber mais sobre como tratamos, armazenamos e protegemos seus dados pessoais, acesse o documento completo:</p>
+      <a href="politica-privacidade.html" class="secondary-button">Consultar Política de Privacidade</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>C&amp;D PetShop</h3>
+        <p>Atendimento humanizado e inteligência artificial para o bem-estar do seu pet.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="exclusao-de-dados.html">Exclusão de Dados</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <p>E-mail: cedpetshop0@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 C&amp;D PetShop. Todos os direitos reservados. C&amp;D Agent é um serviço de atendimento oficial da C&amp;D PetShop.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
